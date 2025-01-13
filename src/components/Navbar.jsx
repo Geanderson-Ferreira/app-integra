@@ -2,6 +2,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ConciergeBell } from 'lucide-react';
 import ProtectedRoute from './ProtectedRoute';
+import Logout from './Logout';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -97,12 +98,7 @@ export default function Navbar(props) {
                   </a>
                 </MenuItem>
                 <MenuItem>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
-                  >
-                    Sign out
-                  </a>
+                  <Logout />
                 </MenuItem>
               </MenuItems>
             </Menu>

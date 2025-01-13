@@ -11,8 +11,6 @@ import Chamados from "../pages/Chamados";
 
 function PrivateRoutes(){
 
-        console.log("Teste")
-
     return(
 
     
