@@ -6,7 +6,7 @@ import { userContext } from "./context/UserContext"; // Correção aqui
 function App() {
   const { auth } = useContext(userContext); // Correção aqui
 
-  console.log(auth)
+  //console.log(auth)
   return (
     <>
       {auth ? <PrivateRoutes /> : <PublicRoutes />}
