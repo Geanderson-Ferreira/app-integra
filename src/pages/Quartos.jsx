@@ -7,7 +7,7 @@ const apiContent = {"housekeepingRoomInfo":{"housekeepingRooms":{"room":[{"roomT
 
 function Quartos() {
     return (
-        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-3 p-2">
+        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-2 p-2">
             {apiContent.housekeepingRoomInfo.housekeepingRooms.room.map((quarto) => (
                 <QuartoCard key={quarto.roomId} quarto={quarto} />
             ))}
