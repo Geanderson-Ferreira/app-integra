@@ -9,7 +9,8 @@ function App() {
   //console.log(auth)
   return (
     <>
-      {auth ? <PrivateRoutes /> : <PublicRoutes />}
+    <PrivateRoutes />
+      {/* {auth ? <PrivateRoutes /> : <PublicRoutes />} */}
     </>
   );
 }
