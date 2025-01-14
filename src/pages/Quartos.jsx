@@ -16,6 +16,7 @@ function Quartos() {
         roomType: "",
         floor: ""
     });
+
     const [uniqueRoomTypes, setUniqueRoomTypes] = useState([]);
     const [uniqueHousekeepingStatuses, setUniqueHousekeepingStatuses] = useState([]);
     const [uniqueFrontOfficeStatuses, setUniqueFrontOfficeStatuses] = useState([]);
@@ -29,10 +30,31 @@ function Quartos() {
         setUniqueFloors([...new Set(roomsContent.housekeepingRoomInfo.housekeepingRooms.room.map(room => room.floor))]);
     }, []); // O array vazio garante que isso só será feito uma vez
 
-    // Filtro de quartos
     function handleFilters(filterType, value) {
-        const updatedFilters = { ...filters, [filterType]: value };
-        setFilters(updatedFilters);
+
+        
+        const url = new URL(window.location);
+
+        if (filterType != undefined){
+            if (value) {
+            url.searchParams.set(filterType, value);
+        } else {
+            url.searchParams.delete(filterType);
+        }
+        window.history.replaceState({}, '', url);
+        }
+        
+    
+        const updatedFilters = {};
+        url.searchParams.forEach((value, key) => {
+            updatedFilters[key] = value;
+        });
+    
+        // Atualiza o estado de forma eficiente, evitando redefinir todo o objeto
+        setFilters(prevFilters => {
+            const newFilters = { ...prevFilters, ...updatedFilters };
+            return newFilters;
+        });
 
         const filteredRooms = apiContent.housekeepingRoomInfo.housekeepingRooms.room.filter((room) => {
             return (
@@ -64,7 +86,10 @@ function Quartos() {
 
     return (
         <div className="pt-20">
+            
+            
             <RoomFilters onFilterChange={handleFilters} availableFilters={availableFilters} />
+            
 
             <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-12 gap-2 p-2 max-w-screen-2xl mx-auto">
                 {roomsContent.housekeepingRoomInfo.housekeepingRooms.room.map((quarto) => (

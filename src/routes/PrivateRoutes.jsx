@@ -7,7 +7,7 @@ import Navbar from "../components/NavBar";
 import Quartos from "../pages/Quartos"
 import Calendar from "../pages/Calendar";
 import Chamados from "../pages/Chamados";
-
+import QuartoDetails from "../components/QuartoDetails";
 
 function PrivateRoutes(){
 
@@ -45,8 +45,16 @@ function PrivateRoutes(){
               <Route
               path="/chamados"
               element={
-                
+
                   <Chamados/>
+              }
+            />
+
+            <Route
+              path="/quartos/:quartoId"
+              element={
+                
+                  <QuartoDetails />
                 
               }
             />
