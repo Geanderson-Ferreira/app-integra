@@ -4,6 +4,8 @@ import App from './App.jsx'
 import './index.css'
 import { userContext } from './context/UserContext'
 import getBrowserData from './context/UserData'
+import { UserProvider } from "./context/UserContext";
+
 
 const Root = () => {
   
@@ -12,9 +14,9 @@ const Root = () => {
   const [auth, setAuth] = useState(userBrowserData.auth);
   return (
     <StrictMode>
-      <userContext.Provider value={{ auth, setAuth }}>
+        <UserProvider>
         <App />
-      </userContext.Provider>
+        </UserProvider>
     </StrictMode>
   );
 };

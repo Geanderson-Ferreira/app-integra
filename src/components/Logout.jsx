@@ -5,9 +5,7 @@ function Logout() {
 
     function makeLogout() {
         // Remover itens do localStorage
-        localStorage.removeItem('INTEGRATOKEN');
-        localStorage.removeItem('INTEGRATOKENVAL');
-        localStorage.removeItem('INTEGRAUSER');
+        localStorage.removeItem('_dataIntegra');
 
         // Navegar para a rota '/login'
         navigate('/login');

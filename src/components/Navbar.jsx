@@ -73,7 +73,7 @@ export default function Navbar(props) {
                   <span className="sr-only">Open user menu</span>
                   <img
                     alt=""
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    src="https://w7.pngwing.com/pngs/706/604/png-transparent-ibis-hotel-ibis-budget-holiday-inn-budget-blue-text-logo-thumbnail.png"
                     className="size-8 rounded-full"
                   />
                 </MenuButton>

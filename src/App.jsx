@@ -1,16 +1,15 @@
 import React, { useContext } from "react";
 import PrivateRoutes from "./routes/PrivateRoutes";
 import PublicRoutes from "./routes/PublicRoutes";
-import { userContext } from "./context/UserContext"; // Correção aqui
+import { userContext } from "./context/UserContext";
 
 function App() {
-  const { auth } = useContext(userContext); // Correção aqui
 
-  //console.log(auth)
+  const { auth } = useContext(userContext);
+
   return (
     <>
-      <PrivateRoutes />
-      {/* {auth ? <PrivateRoutes /> : <PublicRoutes />} */}
+      {auth ? <PrivateRoutes /> : <PublicRoutes />}
     </>
   );
 }
