@@ -68,7 +68,7 @@ function Quartos() {
         <div className="pt-20">
             <RoomFilters onFilterChange={handleFilters} availableFilters={availableFilters} />
 
-            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-2 p-2">
+            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-12 gap-2 p-2 max-w-screen-2xl mx-auto">
                 {roomsContent.housekeepingRoomInfo.housekeepingRooms.room.map((quarto) => (
                     <QuartoCard key={quarto.roomId} quarto={quarto} />
                 ))}

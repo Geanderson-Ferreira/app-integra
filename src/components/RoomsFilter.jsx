@@ -1,6 +1,6 @@
 function RoomFilters({ onFilterChange, availableFilters }) {
   return (
-      <div className="filters  space-y-4 sm:space-y-0 sm:flex sm:flex-row sm:items-start sm:w-full sm:h-auto sm:sticky sm:top-[60px] sm:left-0 place-items-end sm:px-4 sm:py-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <div className="filters max-w-screen-2xl mx-auto space-y-4 sm:space-y-0 sm:flex sm:flex-row sm:items-start sm:w-full sm:h-auto sm:sticky sm:top-[60px] sm:left-0 place-items-end sm:px-4 sm:py-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
       {/* // <div className="filters space-y-4 sm:space-y-0 sm:flex sm:flex-row sm:items-start sm:w-full sm:h-auto sm:sticky sm:top-[60px] sm:left-0 sm:px-4 sm:py-6 grid grid-cols-2 sm:grid-cols-4 gap-4"> */}
 
           <div className="filter-item flex flex-col space-y-2 w-full">
